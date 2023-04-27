@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+          
+    
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>La multi ani, Inuta!</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="scroll">
+
+
+
+    <canvas id="confetti-canvas"></canvas>
+
+  <div id="particles-js"></div>
+  
+  <div class="container">
+    <h1 data-aos="fade-up">La multi ani, Inuta!</h1>
+    <div class="birthday-text-container">
+      <p class="birthday-text" data-aos="fade-up">17 ani</p>
+    </div>
+
+    
+    <div class="gallery">
+      <img data-aos="fade-up" src="images/1.jpg" alt="Photo 1">
+      <img data-aos="fade-up" src="images/2.jpg" alt="Photo 2">
+      <img data-aos="fade-up" src="images/3.jpg" alt="Photo 3">
+      <img data-aos="fade-up" src="images/4.jpg" alt="Photo 4">
+      <img data-aos="fade-up" src="images/5.jpg" alt="Photo 5">
+    </div>
+
+  <div>
+    <button id="sound-btn1" class="sound-btn" onclick="playAudio('audio/ina1.mp3')">La Multi Ani, Inuta!</button>
+    <button id="sound-btn2" class="sound-btn" onclick="playAudio('audio/in2.mp3')">Sanatate Principalu!</button>
+    <button id="sound-btn3" class="sound-btn" onclick="playAudio('audio/te pupa Dima.mp3')">Te Pupa Valerika!</button>
+    <button id="sound-btn4" class="sound-btn" onclick="playAudio('audio/pup.mp3')">Pup</button>
+    <button id="sound-btn5" class="sound-btn" onclick="playAudio('audio/beton.mp3')">La multi ani!</button>
+</div>
+  </div>
+  
+  
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js/dist/index.min.js"></script>
+  
+
+<script>
+    window.onload = function() {
+  var confettiSettings = {
+    target: 'confetti-canvas',
+    max: 200,
+    size: 2,
+    animate: true,
+    props: ['square', 'line', 'triangle', 'circle'],
+    colors: [[255, 0, 0], [0, 255, 0], [0, 0, 255], [255, 255, 0], [255, 0, 255], [0, 255, 255]]
+  };
+  var confetti = new ConfettiGenerator(confettiSettings);
+  confetti.render();
+};
+
+</script>
+
+<script>
+
+function playAudio() {
+  var audio = new Audio('audio/ina1.mp3')
+  var audio = new Audio('audio/in2.mp3');
+  var audio = new Audio('audio/te pupa Dima.mp3');
+  var audio = new Audio('audio/pup.mp3');
+  var audio = new Audio('audio/beton.mp3');
+  audio.play();
+}
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initializeaza AOS
+    AOS.init();
+  </script>
+<script>
+function playAudio(audioSrc) {
+  var audio = new Audio(audioSrc);
+  audio.play();
+}
+</script>
+<video id="video" controls></video>
+
+
+
+
+
+
+
+
+</body>
+</html>
